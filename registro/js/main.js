@@ -2,7 +2,7 @@ const inputs = document.querySelectorAll('.input');
 
 function funcionFocus(){
     let parent = this.parentNode.parentNode; // desde el mismo input. apunta al nodo padre el cual tambien apunta al nodo padre, es decir .input-div
-    parent.classList.add('focus')a
+    parent.classList.add('focus')
 }
 
 function funcionBlur(){

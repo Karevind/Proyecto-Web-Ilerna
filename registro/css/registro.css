@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* /////////////////// CONTENEDOR GENERAL MAS CONTENEDOR DEL LOGIN //////////////////// */
+
+.container {         /*centra el contenedor principal*/
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.avatar {
+    width: 100px;
+}
+
+.login-container {   /*centra el login-container centrando todos sus elementos tanto texto como el resto*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* /////////////////// DETALLES GENERALES DEL FORM /////////////////// */
+
+form {
+    width: 360px;
+}
+
+form h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+/*///////////////////// ESTILO DE LOS INPUT //////////////////////*/
+
+.input-div {
+    position: relative;
+    display: grid;   /*grid hace la magia a la hora de colocar el layout, al poner 2 columnas con tamaños determinados, los nodos hijo se colocan automáticamente en las columnas, dejando los iconos a un lado y los input en otro*/
+    grid-template-columns: 5% 95%;
+    margin: 1em 0;  /*margen 25px vertical y 0 horizontal*/
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+    transition: 1.5s;
+}
+
+.input-div.one {
+    margin-top: 10px;
+}
+
+.input-div.two {
+    margin-bottom: 4px;
+}
+
+    /* /// EFECTOS AL HACER FOCUS EN EL INPUT /// */
+
+    .input-div.focus .i i {
+        color: #38d39f;
+        transition: 0.3s;
+    }
+
+    .input-div.focus div h5{
+        top: -5px;
+        font-size: 15px;
+    }
+
+    .input-div.focus:after {  /*con la pseudoclase after creamos una minidiv de 2px de altura para que se superponga al borde gris, volviendolo verde al hacer focus*/
+        content: '';
+        position: absolute; /* posicionado en funcion de .input-div */
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: #38d39f;
+    }
+
+.i {
+    display: flex;
+    justify-content: center;        /* justify-content centra en el eje x y align items en el eje Y, al ser la columna de los iconos tan pequeña el justify no se nota casi, pero la idea es centrarlo tanto en el eje X como en el Y con align-items */
+    align-items: center;
+    color: #d9d9d9;
+}
+
+.input-div > div {   /* afecta directamente a los hijos div directos de .input-div */
+    position: relative;
+    height: 45px;
+}
+
+    .input-div > div h5 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%); /*eleva el h5 para estar a la misma altura que los iconos, sin estar focuseado*/
+        color: #999;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+.input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none; /*borde fuera*/
+    outline: none; /*al presionar el input sale el outline, pero quiero quitarlo tambien asi que none. */
+    background: none; /* por defecto lo tiene blanco y tapa el border-bottom de .input-div */
+    margin-left: 10px; /* pequeño padding para distanciar los input de los iconos */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ////////////////// HIPERENLACE RECUPERACION PASS Y BOTON SUBMIT /////////////// */
+
+a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+    a:hover {
+        color: #38d39f;
+    }
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px; /* al ser la mitad respecto a su altura se convierte en una elipse */
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    cursor: pointer;
+    color: #fff;
+    background-size: 200%; /*sin especificar un tamaño mas grande del 100% no funciona el hover */
+    transition: 0.5s;
+}
+
+    .btn:hover {        /* al hacer hover la direccion del linear gradient se invierte dando ese efecto de "luz" */
+        background-position: right;
+    }

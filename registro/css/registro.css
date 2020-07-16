@@ -66,6 +66,7 @@ form h1{
     }
 
     .input-div.focus div h5{
+        color: #38d39f;
         top: -5px;
         font-size: 15px;
     }

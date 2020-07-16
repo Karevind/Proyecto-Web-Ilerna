@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.input');
+const inputs = document.querySelectorAll('.input'); //seleccionamos los input como constantes (no cambiará el input) para posteriormente añadirles un eventlistener a cada uno
 
 function funcionFocus(){
     let parent = this.parentNode.parentNode; // desde el mismo input. apunta al nodo padre el cual tambien apunta al nodo padre, es decir .input-div

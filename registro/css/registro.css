@@ -35,6 +35,7 @@ form {
 form h1{
     font-size: 3rem;
     text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
 /*///////////////////// ESTILO DE LOS INPUT //////////////////////*/
